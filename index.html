@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Analista de Sistemas & Developer</title>
+    <title>Portfolio | Gustavo Molina - Analista de Sistemas</title>
     <style>
         :root { --primary: #2c3e50; --secondary: #34495e; --accent: #3498db; --bg: #f4f7f6; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: var(--bg); margin: 0; padding: 0; }
@@ -12,12 +12,21 @@
         .intro { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 2rem; }
         h2 { color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-        .card { background: white; padding: 1.5rem; border-radius: 8px; border-left: 5px solid var(--accent); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .card { background: white; padding: 1.5rem; border-radius: 8px; border-left: 5px solid var(--accent); box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
         .tag { background: #e1f5fe; color: #01579b; padding: 2px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; }
+        .card h3 a { color: var(--primary); text-decoration: none; display: flex; justify-content: space-between; align-items: center; }
+        .card h3 a:hover { color: var(--accent); }
         footer { text-align: center; padding: 2rem; color: #777; font-size: 0.9rem; }
     </style>
 </head>
 <body>
+
+<script>
+    const username = "Gust4vo2310"; 
+    const repo = "mi-portfolio";
+    const baseLink = `https://github.com/${username}/${repo}/tree/main/`;
+</script>
 
 <header>
     <h1>Portfolio de Tecnología</h1>
@@ -30,42 +39,42 @@
         <p>Especialista en análisis de procesos con sólida base técnica en lógica de programación y gestión de datos. Enfocado en soluciones eficientes mediante automatización y desarrollo con <strong>Python</strong>.</p>
     </section>
 
-    <h2>🚀 Proyectos Destacados</h2>
+    <h2>🚀 Proyectos Destacados (Ver Código 🔗)</h2>
     <div class="grid">
         
         <div class="card">
             <span class="tag">Análisis de Datos</span>
-            <h3>Gestor de Personas CSV</h3>
+            <h3><a href="#" onclick="window.open('https://github.com/'+username+'/'+repo+'/tree/main/Gestor-CSV'); return false;">Gestor de Personas CSV 🔗</a></h3>
             <p>Sistema que recopila datos, los organiza en Diccionarios y los exporta a archivos CSV usando <strong>Pandas</strong>. Incluye cálculo automático de edad promedio.</p>
         </div>
 
         <div class="card">
             <span class="tag">Sistemas</span>
-            <h3>Gestor de Tareas Persistente</h3>
+            <h3><a href="#" onclick="window.open('https://github.com/'+username+'/'+repo+'/tree/main/Gestor-Tareas'); return false;">Gestor de Tareas 🔗</a></h3>
             <p>Aplicación de consola con funciones CRUD para tareas. Implementa persistencia de datos mediante manejo de archivos (OS library).</p>
         </div>
 
         <div class="card">
             <span class="tag">Chatbots</span>
-            <h3>VirtualPay & Club Bot</h3>
+            <h3><a href="#" onclick="window.open('https://github.com/'+username+'/'+repo+'/tree/main/Chatbots'); return false;">VirtualPay & Club Bot 🔗</a></h3>
             <p>Simuladores de atención al cliente con menús interactivos, manejo de saldos y lógica condicional compleja.</p>
         </div>
 
         <div class="card">
             <span class="tag">Seguridad</span>
-            <h3>Generador de Credenciales</h3>
+            <h3><a href="#" onclick="window.open('https://github.com/'+username+'/'+repo+'/tree/main/Seguridad'); return false;">Generador Credenciales 🔗</a></h3>
             <p>Herramienta que genera contraseñas seguras de longitud variable y las almacena de forma organizada en archivos de texto.</p>
         </div>
 
         <div class="card">
             <span class="tag">Lógica</span>
-            <h3>Ahorcado 2.0 & Juegos</h3>
+            <h3><a href="#" onclick="window.open('https://github.com/'+username+'/'+repo+'/tree/main/Juegos'); return false;">Ahorcado & Juegos 🔗</a></h3>
             <p>Desarrollo de lógica de juegos (Adivinar número, Piedra Papel o Tijera) con interfaces visuales en consola y control de intentos.</p>
         </div>
 
         <div class="card">
             <span class="tag">Matemáticas</span>
-            <h3>Calculadora Continua</h3>
+            <h3><a href="#" onclick="window.open('https://github.com/'+username+'/'+repo+'/tree/main/Calculadora'); return false;">Calculadora Continua 🔗</a></h3>
             <p>Software de cálculo con manejo de excepciones (Try/Except) para evitar errores de entrada de usuario y división por cero.</p>
         </div>
 
@@ -73,7 +82,7 @@
 </div>
 
 <footer>
-    <p>© 2024 - Diseñado por [Gustavo Molina] | Análisis de Sistemas</p>
+    <p>© 2024 - Diseñado por Gustavo Molina | Análisis de Sistemas</p>
 </footer>
 
 </body>
