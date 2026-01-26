@@ -5,84 +5,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Gustavo Molina - Analista de Sistemas</title>
     <style>
-        :root { --primary: #2c3e50; --secondary: #34495e; --accent: #3498db; --bg: #f4f7f6; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: var(--bg); margin: 0; padding: 0; }
-        header { background: var(--primary); color: white; padding: 2rem 1rem; text-align: center; border-bottom: 4px solid var(--accent); }
-        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
-        .intro { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 2rem; }
-        h2 { color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-        .card { background: white; padding: 1.5rem; border-radius: 8px; border-left: 5px solid var(--accent); box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .tag { background: #e1f5fe; color: #01579b; padding: 2px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; }
-        .card h3 a { color: var(--primary); text-decoration: none; display: block; }
-        .card h3 a:hover { color: var(--accent); }
-        footer { text-align: center; padding: 2rem; color: #777; font-size: 0.9rem; }
+        /* Paleta Dark Mode */
+        :root { 
+            --bg: #0f172a;           /* Fondo oscuro profundo */
+            --card-bg: #1e293b;      /* Fondo de tarjetas */
+            --primary: #f8fafc;      /* Texto principal (blanco grisáceo) */
+            --secondary: #94a3b8;    /* Texto secundario */
+            --accent: #38bdf8;       /* Azul brillante para links y bordes */
+            --header-bg: #1e293b; 
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            color: var(--primary); 
+            background-color: var(--bg); 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        header { 
+            background: var(--header-bg); 
+            color: white; 
+            padding: 3rem 1rem; 
+            text-align: center; 
+            border-bottom: 2px solid var(--accent);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        header h1 { margin: 0; font-size: 2.5rem; color: var(--accent); }
+        header p { margin-top: 0.5rem; font-size: 1.1rem; color: var(--secondary); }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+
+        .intro { 
+            background: var(--card-bg); 
+            padding: 2rem; 
+            border-radius: 12px; 
+            border: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 3rem; 
+        }
+
+        h2 { color: var(--accent); border-bottom: 1px solid #334155; padding-bottom: 0.5rem; margin-top: 2rem; }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 1.5rem; 
+        }
+
+        .card { 
+            background: var(--card-bg); 
+            padding: 1.5rem; 
+            border-radius: 12px; 
+            border-top: 4px solid var(--accent); 
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+            border-top-color: #7dd3fc;
+        }
+
+        .tag { 
+            background: rgba(56, 189, 248, 0.1); 
+            color: var(--accent); 
+            padding: 4px 12px; 
+            border-radius: 20px; 
+            font-size: 0.75rem; 
+            font-weight: bold; 
+            display: inline-block;
+            margin-bottom: 1rem;
+            width: fit-content;
+        }
+
+        .card h3 { margin: 0 0 1rem 0; }
+        .card h3 a { 
+            color: var(--primary); 
+            text-decoration: none; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card p { color: var(--secondary); font-size: 0.95rem; }
+
+        footer { 
+            text-align: center; 
+            padding: 4rem 2rem; 
+            color: var(--secondary); 
+            font-size: 0.9rem; 
+            border-top: 1px solid #334155;
+            margin-top: 3rem;
+        }
+
+        strong { color: var(--accent); }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Portfolio de Tecnología</h1>
-    <p>Técnico Superior en Análisis de Sistemas | Desarrollador Python</p>
+    <h1>Gustavo Molina</h1>
+    <p>Analista de Sistemas | Python Developer</p>
 </header>
 
 <div class="container">
     <section class="intro">
         <h2>Sobre mí</h2>
-        <p>Especialista en análisis de procesos con sólida base técnica en lógica de programación y gestión de datos. Enfocado en soluciones eficientes mediante automatización y desarrollo con <strong>Python</strong>.</p>
+        <p>Especialista en análisis de procesos con sólida base técnica en lógica de programación y gestión de datos. Enfocado en soluciones eficientes mediante automatización y desarrollo con <strong>Python</strong>. Apasionado por transformar datos en información útil.</p>
     </section>
 
-    <h2>🚀 Proyectos Destacados (Ver Código 🔗)</h2>
+    <h2>🚀 Proyectos en GitHub</h2>
     <div class="grid">
         
         <div class="card">
-            <span class="tag">Finanzas & Datos</span>
-            <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Analizador-Gastos" target="_blank">Analizador de Gastos 📊</a></h3>
-            <p>Herramienta para el control de finanzas personales. Procesa ingresos y egresos, categoriza consumos y genera reportes de estado.</p>
+            <div>
+                <span class="tag">Finanzas & Datos</span>
+                <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Analizador-Gastos" target="_blank">Analizador de Gastos 📊</a></h3>
+                <p>Procesamiento de finanzas personales, categorización inteligente y reportes de estado mensuales.</p>
+            </div>
         </div>
 
         <div class="card">
-            <span class="tag">Análisis de Datos</span>
-            <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Gestor-CSV" target="_blank">Gestor de Personas CSV 🔗</a></h3>
-            <p>Sistema que recopila datos, los organiza en Diccionarios y los exporta a archivos CSV usando <strong>Pandas</strong>.</p>
+            <div>
+                <span class="tag">Análisis de Datos</span>
+                <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Gestor-CSV" target="_blank">Gestor de Datos CSV 🔗</a></h3>
+                <p>Manipulación de grandes volúmenes de datos con <strong>Pandas</strong> y exportación automatizada.</p>
+            </div>
         </div>
 
         <div class="card">
-            <span class="tag">Sistemas</span>
-            <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Gestor-Tareas" target="_blank">Gestor de Tareas 🔗</a></h3>
-            <p>Aplicación de consola con funciones CRUD. Implementa persistencia de datos mediante manejo de archivos locales.</p>
+            <div>
+                <span class="tag">Sistemas</span>
+                <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Gestor-Tareas" target="_blank">Gestor de Tareas 🔗</a></h3>
+                <p>Lógica CRUD completa con persistencia en archivos locales para gestión de productividad.</p>
+            </div>
         </div>
 
         <div class="card">
-            <span class="tag">Chatbots</span>
-            <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Chatbots" target="_blank">VirtualPay & Club Bot 🔗</a></h3>
-            <p>Simuladores de atención al cliente con menús interactivos, manejo de saldos y lógica condicional compleja.</p>
+            <div>
+                <span class="tag">Chatbots</span>
+                <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Chatbots" target="_blank">VirtualPay Bot 🔗</a></h3>
+                <p>Interfaz de simulación bancaria con menús interactivos y validación de transacciones.</p>
+            </div>
         </div>
 
         <div class="card">
-            <span class="tag">Seguridad</span>
-            <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Seguridad" target="_blank">Generador Credenciales 🔗</a></h3>
-            <p>Herramienta que genera contraseñas seguras de longitud variable y las almacena en archivos de texto.</p>
+            <div>
+                <span class="tag">Seguridad</span>
+                <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Seguridad" target="_blank">Cifrado de Credenciales 🔗</a></h3>
+                <p>Algoritmos de generación de contraseñas seguras y almacenamiento organizado.</p>
+            </div>
         </div>
 
         <div class="card">
-            <span class="tag">Lógica</span>
-            <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Juegos" target="_blank">Ahorcado & Juegos 🔗</a></h3>
-            <p>Desarrollo de lógica de juegos (Ahorcado, Piedra Papel o Tijera) con interfaces visuales en consola.</p>
+            <div>
+                <span class="tag">Lógica</span>
+                <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Juegos" target="_blank">Ahorcado & Lógica 🔗</a></h3>
+                <p>Implementación de algoritmos de juego y control de flujo mediante consola interactiva.</p>
+            </div>
         </div>
 
         <div class="card">
-            <span class="tag">Matemáticas</span>
-            <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Calculadora" target="_blank">Calculadora Continua 🔗</a></h3>
-            <p>Software de cálculo con manejo de excepciones (Try/Except) para robustez ante errores de usuario.</p>
+            <div>
+                <span class="tag">Matemáticas</span>
+                <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Calculadora" target="_blank">Calculadora Robusta 🔗</a></h3>
+                <p>Manejo avanzado de excepciones (Try/Except) para garantizar la continuidad del sistema.</p>
+            </div>
         </div>
 
     </div>
 </div>
 
 <footer>
-    <p>© 2026 - Diseñado por Gustavo Molina | Análisis de Sistemas</p>
+    <p>© 2026 | Diseñado con Python Mindset por Gustavo Molina</p>
 </footer>
 
 </body>
