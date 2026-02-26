@@ -61,4 +61,4 @@ Creación de herramientas para la generación de credenciales seguras y almacena
 Como Analista de Sistemas, busco optimizar procesos manuales mediante código eficiente, escalable y con un fuerte enfoque en la integridad de los datos.
 
 📫 **¿Cómo contactarme?**
-* 📧 **Email:** [gustavogabrielmolina071@gmail.com](mailto:gustavogabrielmolina071@gmail.com)
+* 📧 **Email:** [gustavomolina.it@gmail.com](mailto:gustavomolina.it@gmail.com)
