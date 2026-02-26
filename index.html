@@ -3,196 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Gustavo Molina - Analista de Sistemas</title>
+    <title>Mi Portfolio - Gust4vo2310</title>
     <style>
-        /* Paleta Dark Mode */
-        :root { 
-            --bg: #0f172a;           /* Fondo oscuro profundo */
-            --card-bg: #1e293b;      /* Fondo de tarjetas */
-            --primary: #f8fafc;      /* Texto principal (blanco grisáceo) */
-            --secondary: #94a3b8;    /* Texto secundario */
-            --accent: #38bdf8;       /* Azul brillante para links y bordes */
-            --header-bg: #1e293b; 
-        }
-
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            line-height: 1.6; 
-            color: var(--primary); 
-            background-color: var(--bg); 
-            margin: 0; 
-            padding: 0; 
-        }
-
-        header { 
-            background: var(--header-bg); 
-            color: white; 
-            padding: 3rem 1rem; 
-            text-align: center; 
-            border-bottom: 2px solid var(--accent);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-        }
-
-        header h1 { margin: 0; font-size: 2.5rem; color: var(--accent); }
-        header p { margin-top: 0.5rem; font-size: 1.1rem; color: var(--secondary); }
-
-        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
-
-        .intro { 
-            background: var(--card-bg); 
-            padding: 2rem; 
-            border-radius: 12px; 
-            border: 1px solid rgba(255,255,255,0.1);
-            margin-bottom: 3rem; 
-        }
-
-        h2 { color: var(--accent); border-bottom: 1px solid #334155; padding-bottom: 0.5rem; margin-top: 2rem; }
-
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 1.5rem; 
-        }
-
-        .card { 
-            background: var(--card-bg); 
-            padding: 1.5rem; 
-            border-radius: 12px; 
-            border-top: 4px solid var(--accent); 
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card:hover { 
-            transform: translateY(-8px); 
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
-            border-top-color: #7dd3fc;
-        }
-
-        .tag { 
-            background: rgba(56, 189, 248, 0.1); 
-            color: var(--accent); 
-            padding: 4px 12px; 
-            border-radius: 20px; 
-            font-size: 0.75rem; 
-            font-weight: bold; 
-            display: inline-block;
-            margin-bottom: 1rem;
-            width: fit-content;
-        }
-
-        .card h3 { margin: 0 0 1rem 0; }
-        .card h3 a { 
-            color: var(--primary); 
-            text-decoration: none; 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .card p { color: var(--secondary); font-size: 0.95rem; }
-
-        footer { 
-            text-align: center; 
-            padding: 4rem 2rem; 
-            color: var(--secondary); 
-            font-size: 0.9rem; 
-            border-top: 1px solid #334155;
-            margin-top: 3rem;
-        }
-
-        strong { color: var(--accent); }
+        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f4f4; }
+        header { text-align: center; padding: 20px; background: #333; color: white; border-radius: 8px; }
+        .proyectos-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
+        .proyecto { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h3 { margin-top: 0; color: #007bff; }
+        p { font-size: 0.9em; color: #555; }
+        .btn { display: inline-block; padding: 8px 15px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; font-size: 0.8em; }
+        .btn:hover { background: #0056b3; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Gustavo Molina</h1>
-    <p>Analista de Sistemas | Python Developer</p>
-</header>
+    <header>
+        <h1>Mi Portfolio de Proyectos</h1>
+        <p>Proyectos de Python y Análisis de Datos</p>
+    </header>
 
-<div class="container">
-    <section class="intro">
-        <h2>Sobre mí</h2>
-        <p>Especialista en análisis de procesos con sólida base técnica en lógica de programación y gestión de datos. Enfocado en soluciones eficientes mediante automatización y desarrollo con <strong>Python</strong>. Apasionado por transformar datos en información útil.</p>
-    </section>
+    <div class="proyectos-container">
 
-    <h2>🚀 Proyectos en GitHub</h2>
-    <div class="grid">
-        
-        <div class="card">
-            <div>
-                <span class="tag">Deportes & Data</span>
-                <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Proyecto_liga" target="_blank">Análisis Liga Argentina ⚽</a></h3>
-                <p>Procesamiento de estadísticas deportivas con Python, manejo de datasets en CSV y generación de visualizaciones de rendimiento.</p>
-            </div>
+        <div class="proyecto">
+            <h3>⚽ Análisis de Liga Argentina</h3>
+            <p>Script en Python que procesa datos de fútbol, genera estadísticas de goles y gráficos con Pandas y Matplotlib.</p>
+            <a href="./Proyecto_liga/" class="btn">Ver Carpeta de Código</a>
         </div>
 
-        <div class="card">
-            <div>
-                <span class="tag">Finanzas & Datos</span>
-                <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Analizador-Gastos" target="_blank">Analizador de Gastos 📊</a></h3>
-                <p>Procesamiento de finanzas personales, categorización inteligente y reportes de estado mensuales.</p>
-            </div>
+        <div class="proyecto">
+            <h3>💰 Analizador de Gastos</h3>
+            <p>Herramienta para el seguimiento de finanzas personales y categorización de consumos mensuales.</p>
+            <a href="./Analizador-Gastos/" class="btn">Ver Proyecto</a>
         </div>
 
-        <div class="card">
-            <div>
-                <span class="tag">Análisis de Datos</span>
-                <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Gestor-CSV" target="_blank">Gestor de Datos CSV 🔗</a></h3>
-                <p>Manipulación de grandes volúmenes de datos con <strong>Pandas</strong> y exportación automatizada.</p>
-            </div>
+        <div class="proyecto :">
+            <h3>📄 Gestor de CSV</h3>
+            <p>Lógica en Python para la lectura, filtrado y limpieza de grandes volúmenes de datos en archivos CSV.</p>
+            <a href="./Gestor-CSV/" class="btn">Ver Proyecto</a>
         </div>
 
-        <div class="card">
-            <div>
-                <span class="tag">Sistemas</span>
-                <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Gestor-Tareas" target="_blank">Gestor de Tareas 🔗</a></h3>
-                <p>Lógica CRUD completa con persistencia en archivos locales para gestión de productividad.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div>
-                <span class="tag">Chatbots</span>
-                <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Chatbots" target="_blank">VirtualPay Bot 🔗</a></h3>
-                <p>Interfaz de simulación bancaria con menús interactivos y validación de transacciones.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div>
-                <span class="tag">Seguridad</span>
-                <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Seguridad" target="_blank">Cifrado de Credenciales 🔗</a></h3>
-                <p>Algoritmos de generación de contraseñas seguras y almacenamiento organizado.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div>
-                <span class="tag">Lógica</span>
-                <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Juegos" target="_blank">Ahorcado & Lógica 🔗</a></h3>
-                <p>Implementación de algoritmos de juego y control de flujo mediante consola interactiva.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div>
-                <span class="tag">Matemáticas</span>
-                <h3><a href="https://github.com/gust4vo2310/mi-portfolio/tree/main/Calculadora" target="_blank">Calculadora Robusta 🔗</a></h3>
-                <p>Manejo avanzado de excepciones (Try/Except) para garantizar la continuidad del sistema.</p>
-            </div>
+        <div class="proyecto">
+            <h3>🤖 Chatbots</h3>
+            <p>Implementación de flujos conversacionales básicos y lógica de respuesta automática.</p>
+            <a href="./Chatbots/" class="btn">Ver Proyecto</a>
         </div>
 
     </div>
-</div>
-
-<footer>
-    <p>© 2026 | Diseñado con Python Mindset por Gustavo Molina</p>
-</footer>
 
 </body>
 </html>
