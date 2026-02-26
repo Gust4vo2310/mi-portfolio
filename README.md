@@ -1,8 +1,13 @@
 # 💻 Portfolio de Tecnología | Gustavo Molina
 
 ### 🎓 Técnico Superior en Análisis de Sistemas & Python Developer
-Bienvenido a mi repositorio de proyectos. Aquí encontrarás soluciones enfocadas en la **automatización**, **lógica de programación** y **gestión de datos**.
+Técnico Superior en Analisis de Sistemas enfocado en el desarrollo de soluciones eficientes y la toma de decisiones basadas en datos. Cuento con sólida experiencia utilizando Python para la automatización de tareas y análisis de información, complementada con el manejo de bases de datos mediante SQL.
 
+Mi objetivo es transformar problemas complejos en herramientas digitales robustas, desde scripts de procesamiento hasta sistemas de gestión funcional.
+
+---
+🛠️ Tecnologías destacadas:
+🐍 Python | 📊 Pandas | 🗄️ SQL | 📈 Matplotlib | 📁 Gestión de CSV/Excel
 ---
 
 ## 🛠️ Tecnologías y Herramientas
@@ -14,22 +19,27 @@ Bienvenido a mi repositorio de proyectos. Aquí encontrarás soluciones enfocada
 
 ## 📂 Proyectos Destacados
 
-### ⚽ [Análisis Liga Profesional (2012 - 2026)](./Proyecto_liga/)
-Este proyecto analiza la evolución del fútbol argentino procesando miles de datos estadísticos para convertirlos en información visual clara.
+### ⚽ [Análisis Liga Profesional (2012 - 2026)]
+Este proyecto utiliza **Python** y la libreria **Pandas** para procesar datos históricos del futbol argentino.
+
+### 📋 ¿Qué hace el programa?
+* **Carga de Datos:** Lee un archivo CSV con resultados históricos de la liga.
+* **Procesamiento:** Filtra y agrupa estadísticas de goles por equipo y temporada.
+* **Visualización:** Genera gráficos con **Matplotlib** para mostrar tendencias de rendimiento.
 
 #### 🔍 Conclusiones del Análisis
-* [cite_start]**Tendencia de Goleo:** El promedio de gol alcanzó su punto máximo en 2021, pero muestra un descenso pronunciado hasta sus niveles más bajos en febrero de 2026[cite: 1, 2].
-* [cite_start]**Dominio Ofensivo:** Identificamos el Top 5 de equipos goleadores, destacando la regularidad de los clubes con mayor presupuesto en la última década[cite: 3].
-* [cite_start]**Ventaja de Localía:** Se confirma que jugar en casa es determinante, con un porcentaje de victorias locales superior a las visitantes[cite: 4, 5].
-* [cite_start]**Transformación de Datos:** El uso de Python permitió identificar récords históricos, como el partido con mayor cantidad de goles registrado[cite: 6, 7].
+* **Tendencia de Goleo:** El promedio de gol alcanzó su punto máximo en 2021, pero muestra un descenso pronunciado hasta sus niveles más bajos en febrero de 2026(24/2).
+* **Dominio Ofensivo:** Identificamos el Top 5 de equipos goleadores, destacando la regularidad de los clubes con mayor presupuesto en la última década.
+* **Ventaja de Localía:** Se confirma que jugar en casa es determinante, con un porcentaje de victorias locales superior a las visitantes.
+* **Transformación de Datos:** El uso de Python permitió identificar récords históricos, como el partido con mayor cantidad de goles registrado.
 
 #### ⚙️ Guía de Funcionamiento Técnico
 El sistema utiliza un "motor" basado en las siguientes herramientas de Python:
-* [cite_start]**Pandas (pd):** Nuestra hoja de cálculo inteligente para manejar y agrupar datos según año o equipo[cite: 8, 10, 19].
-* [cite_start]**Matplotlib (plt):** Librería para dibujar gráficos de líneas y barras con cuadrículas de lectura fácil[cite: 10, 11, 23].
-* [cite_start]**Lógica de Procesamiento:** * Transforma fechas al formato argentino (DD/MM/AAAA)[cite: 12, 14].
-    * [cite_start]Calcula automáticamente el `Total_Goles` y porcentajes de resultados[cite: 15, 17].
-    * [cite_start]Utiliza bucles `for` para etiquetas de datos "pro" sobre las barras de los gráficos[cite: 28, 29].
+* **Pandas (pd):** Nuestra hoja de cálculo inteligente para manejar y agrupar datos según año o equipo.
+* **Matplotlib (plt):** Librería para dibujar gráficos de líneas y barras con cuadrículas de lectura fácil.
+* **Lógica de Procesamiento:** * Transforma fechas al formato argentino (DD/MM/AAAA).
+*Calcula automáticamente el `Total_Goles` y porcentajes de resultados.
+*Utiliza bucles `for` para etiquetas de datos "pro" sobre las barras de los gráficos.
 
 ---
 
