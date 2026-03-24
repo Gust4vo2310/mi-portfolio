@@ -27,8 +27,10 @@ Este proyecto utiliza **Python** y la libreria **Pandas** para procesar datos hi
 * **Procesamiento:** Filtra y agrupa estadísticas de goles por equipo y temporada.
 * **Visualización:** Genera gráficos para mostrar tendencias de rendimiento.
 
-
 ---
+
+### 🎫 [Sistema de Gestión de Tickets](https://github.com/gust4vo2310/mi-portfolio/tree/main/Sistema-Tickets)
+Desarrollo de un sistema funcional para la administración de incidencias. Permite crear, buscar y actualizar estados de tickets con persistencia de datos en formato **JSON**.
 
 ### 📊 [Analizador de Gastos](https://github.com/gust4vo2310/mi-portfolio/tree/main/Analizador-Gastos)
 Herramienta para el control financiero personal. Permite registrar ingresos y egresos, categorizar gastos y generar reportes para la toma de decisiones.
