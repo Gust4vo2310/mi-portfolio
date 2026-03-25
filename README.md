@@ -32,6 +32,9 @@ Este proyecto utiliza **Python** y la libreria **Pandas** para procesar datos hi
 ### 🎫 [Sistema de Gestión de Tickets](https://github.com/gust4vo2310/mi-portfolio/tree/main/Sistema-Tickets)
 Desarrollo de un sistema funcional para la administración de incidencias. Permite crear, buscar y actualizar estados de tickets con persistencia de datos en formato **JSON**.
 
+### 💵 [Consultor de Dólar en Tiempo Real](https://github.com/gust4vo2310/mi-portfolio/tree/main/Consultor%20Dolar%20en%20TIEMPO%20REAL)
+Script interactivo que conecta con la API de **CriptoYa** para obtener cotizaciones en vivo y realizar conversiones de moneda. Implementa manejo de excepciones para garantizar la estabilidad de la conexión.
+
 ### 📊 [Analizador de Gastos](https://github.com/gust4vo2310/mi-portfolio/tree/main/Analizador-Gastos)
 Herramienta para el control financiero personal. Permite registrar ingresos y egresos, categorizar gastos y generar reportes para la toma de decisiones.
 
