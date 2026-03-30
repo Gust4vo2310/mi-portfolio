@@ -20,6 +20,16 @@ Mi objetivo es transformar problemas complejos en herramientas digitales robusta
 
 ## 📂 Proyectos Destacados
 
+### 🎙️ [Lector de Texto a Voz (TTS)](https://github.com/Gust4vo2310/mi-portfolio/tree/main/Texto%20a%20voz)
+Desarrollo de un script que automatiza la conversión de documentos de texto a archivos de audio legibles. Ideal para la creación de audiolibros o herramientas de accesibilidad.
+
+### 📋 ¿Qué hace?
+* **Lectura de Archivos:** Procesa archivos `.txt` con soporte para caracteres especiales (UTF-8).
+* **Motor de Voz:** Utiliza la librería **gTTS** (Google Text-to-Speech) para generar una locución natural en español.
+* **Automatización:** Genera un archivo `.mp3` y lo reproduce instantáneamente mediante comandos de sistema.
+
+---
+
 ### 🎙️ [Transcriptor de Audio WhatsApp (es-AR)](https://github.com/gust4vo2310/mi-portfolio/tree/main/Transcriptor)
 Desarrollo de una herramienta para automatizar la transcripción de mensajes de voz. Ideal para procesar audios largos y convertirlos en texto editable.
 
