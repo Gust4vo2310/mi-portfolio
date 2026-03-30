@@ -7,18 +7,29 @@ Mi objetivo es transformar problemas complejos en herramientas digitales robusta
 
 ---
 🛠️ Tecnologías destacadas:
-🐍 Python | 📊 Pandas | 🗄️ SQL | 🎙️ Speech Recognition | 📁 Gestión de CSV/JSON
+🐍 Python | 📊 Pandas | 🗄️ SQL | 🎙️ Speech Recognition | 📄 Procesamiento de PDF | 📁 Gestión de CSV/JSON
 ---
 
 ## 🛠️ Tecnologías y Herramientas
 * **Lenguajes:** Python (Lógica, Scripts, Manejo de Excepciones)
-* **Librerías:** Pandas (Análisis de Datos), SpeechRecognition (Voz a Texto), Pydub (Audio), Matplotlib, OS.
+* **Librerías:** Pandas (Análisis de Datos), SpeechRecognition (Voz a Texto), PyPDF2 (Manejo de PDF), pyttsx3 (Texto a Voz Offline), Pydub (Audio), Matplotlib, OS.
 * **Herramientas Externas:** FFmpeg (Procesamiento Multimedia), APIs Rest (CriptoYa, Google Cloud).
 * **Sistemas:** Análisis de procesos, arquitectura CRUD y persistencia de datos.
 
 ---
 
 ## 📂 Proyectos Destacados
+
+### 📄 [Lector de PDF con Selección de Voz](https://github.com/Gust4vo2310/mi-portfolio/tree/main/Lector_PDF_Voz)
+Herramienta diseñada para la extracción de texto desde archivos PDF y su conversión a voz en tiempo real. Permite al usuario interactuar con el sistema para elegir el tipo de voz y optimizar la escucha.
+
+### 📋 ¿Qué hace?
+* **Extracción Dinámica:** Utiliza la librería **PyPDF2** para recorrer y procesar todas las páginas de un documento PDF.
+* **Limpieza de Datos:** Implementa lógica de filtrado para eliminar caracteres especiales y símbolos (como diagonales) que entorpecen la fluidez de la lectura.
+* **Personalización de Voz:** Filtra automáticamente los paquetes de idioma del sistema para ofrecer al usuario una elección entre **voz masculina y femenina** en español.
+* **Control de Velocidad:** Ajusta el motor de voz (**pyttsx3**) para una locución pausada y comprensible.
+
+---
 
 ### 🎙️ [Lector de Texto a Voz (TTS)](https://github.com/Gust4vo2310/mi-portfolio/tree/main/Texto%20a%20voz)
 Desarrollo de un script que automatiza la conversión de documentos de texto a archivos de audio legibles. Ideal para la creación de audiolibros o herramientas de accesibilidad.
