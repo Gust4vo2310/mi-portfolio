@@ -12,7 +12,7 @@ Mi objetivo es transformar problemas complejos en herramientas digitales robusta
 
 ## 🛠️ Tecnologías y Herramientas
 * **Lenguajes:** Python (Lógica, Scripts, Manejo de Excepciones)
-* **Librerías:** Pandas (Análisis de Datos), SpeechRecognition (Voz a Texto), PyPDF2 (Manejo de PDF), pyttsx3 (Texto a Voz Offline), Pydub (Audio), Matplotlib, OS.
+* **Librerías:** Pandas (Análisis de Datos), SpeechRecognition (Voz a Texto), PyPDF2 (Manejo de PDF), pyttsx3 (Texto a Voz Offline), Keyboard (Control en tiempo real), Pydub (Audio), Matplotlib, OS.
 * **Herramientas Externas:** FFmpeg (Procesamiento Multimedia), APIs Rest (CriptoYa, Google Cloud).
 * **Sistemas:** Análisis de procesos, arquitectura CRUD y persistencia de datos.
 
@@ -20,24 +20,14 @@ Mi objetivo es transformar problemas complejos en herramientas digitales robusta
 
 ## 📂 Proyectos Destacados
 
-### 📄 [Lector de PDF con Selección de Voz](https://github.com/Gust4vo2310/mi-portfolio/tree/main/Lector_PDF_Voz)
-Herramienta diseñada para la extracción de texto desde archivos PDF y su conversión a voz en tiempo real. Permite al usuario interactuar con el sistema para elegir el tipo de voz y optimizar la escucha.
+### 🎧 [Escucha tu PDF]
+Herramienta avanzada para la conversión de documentos PDF a voz en tiempo real. A diferencia de los lectores estáticos, este sistema permite una interacción dinámica total con el usuario durante la lectura.
 
 ### 📋 ¿Qué hace?
-* **Extracción Dinámica:** Utiliza la librería **PyPDF2** para recorrer y procesar todas las páginas de un documento PDF.
-* **Limpieza de Datos:** Implementa lógica de filtrado para eliminar caracteres especiales y símbolos (como diagonales) que entorpecen la fluidez de la lectura.
-* **Personalización de Voz:** Filtra automáticamente los paquetes de idioma del sistema para ofrecer al usuario una elección entre **voz masculina y femenina** en español.
-* **Control de Velocidad:** Ajusta el motor de voz (**pyttsx3**) para una locución pausada y comprensible.
-
----
-
-### 🎙️ [Lector de Texto a Voz (TTS)](https://github.com/Gust4vo2310/mi-portfolio/tree/main/Texto%20a%20voz)
-Desarrollo de un script que automatiza la conversión de documentos de texto a archivos de audio legibles. Ideal para la creación de audiolibros o herramientas de accesibilidad.
-
-### 📋 ¿Qué hace?
-* **Lectura de Archivos:** Procesa archivos `.txt` con soporte para caracteres especiales (UTF-8).
-* **Motor de Voz:** Utiliza la librería **gTTS** (Google Text-to-Speech) para generar una locución natural en español.
-* **Automatización:** Genera un archivo `.mp3` y lo reproduce instantáneamente mediante comandos de sistema.
+* **Control en Tiempo Real:** Implementa escucha de teclado con la librería **keyboard**, permitiendo Pausar, Reanudar y Cerrar, la lectura de forma instantánea.
+* **Segmentación Inteligente:** Divide el contenido del PDF en oraciones lógicas para garantizar una locución natural y permitir interrupciones precisas entre frases.
+* **Arquitectura Anti-Bloqueo:** Utiliza una estrategia de re-inicialización del motor por cada segmento de texto, evitando errores de memoria y garantizando estabilidad en sesiones de lectura largas.
+* **Limpieza Automática:** Procesa el texto extraído con **PyPDF2** para eliminar saltos de línea y caracteres residuales, optimizando la fluidez del audio.
 
 ---
 
@@ -51,7 +41,7 @@ Desarrollo de una herramienta para automatizar la transcripción de mensajes de 
 
 ---
 
-### ⚽ [Análisis Liga Profesional (2012 - 2026)]
+### ⚽ [Análisis Liga Profesional (2012 - 2026)](https://github.com/gust4vo2310/mi-portfolio/tree/main/Proyecto_liga)
 Este proyecto utiliza **Python** y la librería **Pandas** para procesar datos históricos del fútbol argentino.
 
 ### 📋 ¿Qué hace?
@@ -61,7 +51,7 @@ Este proyecto utiliza **Python** y la librería **Pandas** para procesar datos h
 
 ---
 
-### 🎫 [Sistema de Gestión de Tickets](https://github.com/gust4vo2310/mi-portfolio/tree/main/Sistema-Tickets)
+### 📋 [Sistema de Gestión de Tickets](https://github.com/gust4vo2310/mi-portfolio/tree/main/Sistema-Tickets)
 Desarrollo de un sistema funcional para la administración de incidencias. Permite crear, buscar y actualizar estados de tickets con persistencia de datos en formato **JSON**.
 
 ### 💵 [Consultor de Dólar en Tiempo Real](https://github.com/gust4vo2310/mi-portfolio/tree/main/Consultor%20Dolar%20en%20TIEMPO%20REAL)
@@ -69,15 +59,6 @@ Script interactivo que conecta con la API de **CriptoYa** para obtener cotizacio
 
 ### 📊 [Analizador de Gastos](https://github.com/gust4vo2310/mi-portfolio/tree/main/Analizador-Gastos)
 Herramienta para el control financiero personal. Permite registrar ingresos y egresos, categorizar gastos y generar reportes para la toma de decisiones.
-
-### 📈 [Gestor de Datos CSV](https://github.com/gust4vo2310/mi-portfolio/tree/main/Gestor-CSV)
-Uso de la librería **Pandas** para procesar información, organizar diccionarios complejos y generar reportes automatizados en formato CSV. 
-
-### 🤖 [Sistemas de Chatbots](https://github.com/gust4vo2310/mi-portfolio/tree/main/Chatbots)
-Desarrollo de simuladores de atención al cliente (VirtualPay) con lógica condicional avanzada y manejo de flujos de usuario.
-
-### 🔐 [Seguridad & Algoritmos](https://github.com/gust4vo2310/mi-portfolio/tree/main/Seguridad)
-Creación de herramientas para la generación de credenciales seguras y almacenamiento organizado mediante gestión de archivos.
 
 ---
 
