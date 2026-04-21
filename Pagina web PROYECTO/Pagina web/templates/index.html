@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C.S.D. y F. Villa Garibaldi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { 
+            background-image: linear-gradient(rgba(0, 10, 30, 0.8), rgba(0, 10, 30, 0.95)), url("{{ url_for('static', filename='fondo_cancha.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        } 
+        .texto-destacado {
+            font-size: 1.6rem; color: #ffffff; font-weight: 700;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+        }
+        .logo-nav { height: 55px; width: auto; filter: drop-shadow(0px 0px 8px rgba(255,255,255,0.3)); }
+        .nav-link { color: white !important; transition: 0.3s; }
+        .nav-link:hover { color: #ff3131 !important; }
+
+        /* Estilo Dropdown -despliegue- */
+        .dropdown-menu-dark {
+            background-color: #000a1a !important;
+            border: 1px solid #ff3131 !important;
+            border-radius: 10px;
+        }
+        
+        .dropdown-header {
+            color: #ff3131 !important;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            opacity: 1 !important;
+        }
+        .dropdown-item:hover { background-color: #ff3131 !important; color: white !important; }
+
+        .text-villa-rojo { color: #ff3131 !important; font-weight: 800; text-transform: uppercase; }
+        
+        .card-villa-pro {
+            background-color: rgba(0, 20, 45, 0.85);
+            border: 1px solid rgba(255, 49, 49, 0.4);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+        }
+
+        .card-villa-pro:hover {
+            transform: translateY(-10px);
+            border-color: #ff3131;
+            box-shadow: 0 15px 35px rgba(255, 49, 49, 0.3);
+            background-color: rgba(0, 30, 60, 0.9);
+        }
+
+        .btn-whatsapp { background-color: #25d366; color: white; font-weight: bold; border-radius: 12px; padding: 15px; border: none; }
+        .mapa-card-pro { background: #001529; padding: 8px; border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.1); }
+
+        /* BOTONES NUEVOS COMUNIDAD Y SPONSOR */
+        .btn-canal { background-color: #00a884; color: white; font-weight: bold; border-radius: 12px; transition: 0.3s; border: none; }
+        .btn-sponsor-contacto { background-color: #ffc107; color: #000; font-weight: bold; border-radius: 12px; transition: 0.3s; border: none; }
+        .btn-canal:hover, .btn-sponsor-contacto:hover { opacity: 0.9; transform: scale(1.02); color: white; }
+        
+        /* LOGOS SPONSORS */
+        .logo-sponsor { filter: grayscale(100%) brightness(200%); opacity: 0.6; transition: 0.4s; max-height: 50px; }
+        .logo-sponsor:hover { filter: grayscale(0%); opacity: 1; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark py-2 sticky-top" style="background-color: #000a1a; border-bottom: 2px solid #ff3131;">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+                <img src="{{ url_for('static', filename='escudo_club.png') }}" alt="Escudo" class="logo-nav me-3">
+                <span>VILLA GARIBALDI</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link fw-bold px-3" href="/historia">HISTORIA</a></li>
+                    
+                    <li class="nav-item"><a class="nav-link fw-bold px-3" href="/galeria">FOTOS</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-bold px-3" href="#" role="button" data-bs-toggle="dropdown">FÚTBOL</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item fw-bold" href="/fixture" style="color: #ff3131;"><i class="fas fa-calendar-alt me-2"></i>Ver Fixture</a></li>
+                            <li><a class="dropdown-item fw-bold" href="/resultados" style="color: #ff3131;"><i class="fas fa-poll-h me-2"></i>Resultados</a></li>
+                            <li><a class="dropdown-item fw-bold" href="https://www.instagram.com/subcomisiondfutvillagaribaldi?igsh=MWNzdDJtNXNxbnI5NA==" target="_blank" style="color: #E1306C;"><i class="fab fa-instagram me-2"></i>Resultados en Vivo</a></li>
+                            <li><a class="dropdown-item fw-bold" href="https://www.instagram.com/ligacosterariodelaplata?igsh=MTl4YWJqbmgyYjVrbA==" target="_blank" style="color: #ff3131;"><i class="fas fa-table me-2"></i>Tabla de Posiciones</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">Fútbol Masculino</h6></li>
+                            <li><a class="dropdown-item" href="/primera">Primera División</a></li>
+                            <li><a class="dropdown-item" href="/reserva">Reserva</a></li>
+                            <li><a class="dropdown-item" href="/senior">Senior</a></li>
+                            <li><hr class="dropdown-divider" style="border-color: rgba(255,255,255,0.1);"></li>
+                            <li><h6 class="dropdown-header">Juveniles</h6></li>
+                            <li><a class="dropdown-item" href="/cuarta">4ta División</a></li>
+                            <li><a class="dropdown-item" href="/quinta">5ta División</a></li>
+                            <li><a class="dropdown-item" href="/sexta">6ta División</a></li>
+                            <li><hr class="dropdown-divider" style="border-color: rgba(255,255,255,0.1);"></li>
+                            <li><a class="dropdown-item text-villa-rojo fw-bold" style="font-size: 0.85rem;" href="/femenino">Fútbol Femenino</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-bold px-3" href="#" role="button" data-bs-toggle="dropdown">ACTIVIDADES</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="/actividad/patin">Patín Artístico</a></li>
+                            <li><a class="dropdown-item" href="/actividad/voley_masculino">Voley Masculino</a></li>
+                            <li><a class="dropdown-item" href="/actividad/voley_femenino">Voley Femenino</a></li>
+                            <li><a class="dropdown-item" href="/actividad/boxeo">Boxeo</a></li>
+                            <li><a class="dropdown-item" href="/actividad/bochas">Bochas</a></li>
+                            <li><a class="dropdown-item" href="/actividad/kickboxing">Kick Boxing</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-bold px-3" href="#" role="button" data-bs-toggle="dropdown">CAMPEONATOS</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="/campeonatos/futbol">Fútbol</a></li>
+                            <li><a class="dropdown-item" href="/campeonatos/voley">Voley </a></li>
+                            <li><a class="dropdown-item" href="/campeonatos/patin">Patín Artístico</a></li>
+                            <li><a class="dropdown-item" href="/campeonatos/boxeo">Boxeo</a></li>
+                            <li><a class="dropdown-item" href="/campeonatos/bochas">Bochas</a></li>
+                            <li><a class="dropdown-item" href="/campeonatos/kick-boxing">Kick Boxing</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link fw-bold px-3" href="#sede">UBICACIÓN</a></li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold px-3" href="https://wa.me/5492223435222?text=Hola!%20Me%20interesa%20adquirir%20la%20indumentaria%20oficial%20de%20Villa" target="_blank" style="color: #ff3131 !important; white-space: nowrap; font-size: 0.9rem;">
+                            VILLA STORE <i class="fas fa-tshirt ms-1"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="btn btn-danger fw-bold px-4" href="https://wa.me/5492223435222" style="border-radius: 20px;">HACETE SOCIO</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 text-center">
+        <h1 class="display-4 fw-bold mb-3">Club Social Deportivo y Fomento</h1>
+        <h2 class="display-2 fw-bold mb-4">Villa Garibaldi</h2>
+        <p class="texto-destacado mb-5">75 AÑOS SIENDO EL CLUB DEL PUEBLO</p>
+        
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-4 mb-3"><a href="https://www.instagram.com/clubvillagaribaldi.ok" class="btn btn-outline-light w-100 py-2"><i class="fab fa-instagram me-2"></i>Instagram Club</a></div>
+            <div class="col-md-4 mb-3"><a href="https://www.instagram.com/subcomisiondfutvillagaribaldi" class="btn btn-outline-light w-100 py-2"><i class="fab fa-instagram me-2"></i>Instagram Fútbol</a></div>
+        </div>
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8 text-center">
+                <a href="/galeria" class="btn btn-outline-danger btn-lg px-5 py-3 shadow" style="border-radius: 50px; border-width: 2px; font-weight: 800; letter-spacing: 1px;">
+                    <i class="fas fa-images me-2"></i> MOMENTOS HISTORICOS
+                </a>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <div class="card-villa-pro p-4">
+                    <h2 class="fw-bold mb-2">¡Asociate ya!</h2>
+                    <a href="https://wa.me/5492223435222" class="btn btn-whatsapp w-100"><i class="fab fa-whatsapp me-2"></i>Sumate a la familia azulgrana por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5 text-start">
+            <div class="col-md-6">
+                <div class="card-villa-pro p-4 h-100 text-center">
+                    <h3 class="text-villa-rojo mb-4" style="letter-spacing: 2px; font-size: 1.2rem;">NUESTRA SEMANA</h3>
+                    <div class="d-flex justify-content-between align-items-center mb-4 bg-dark py-2 rounded-pill border border-secondary">
+                        <button class="btn text-white fs-4" onclick="cambiarDia(-1)"><i class="fas fa-chevron-left"></i></button>
+                        <h4 class="fw-bold mb-0" id="nombre-dia" style="min-width: 150px; font-size: 1.1rem;">LUNES</h4>
+                        <button class="btn text-white fs-4" onclick="cambiarDia(1)"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div id="lista-actividades" class="text-start mx-auto" style="max-width: 400px;">
+                        </div>
+                    <p class="small mt-4 opacity-50"><i class="fas fa-arrows-left-right me-2"></i>Navegá los días de la semana</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card-villa-pro p-4 h-100 d-flex flex-column">
+                    <h3 class="text-villa-rojo mb-4 text-center" style="letter-spacing: 2px; font-size: 1.2rem;">NOTICIAS</h3>
+                    
+                    <div class="flex-grow-1 d-flex align-items-center">
+                        {% if noticias %}
+                        <div id="carouselNoticias" class="carousel slide w-100" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                {% for noticia in noticias %}
+                                <div class="carousel-item {% if loop.first %}active{% endif %}">
+                                    <div class="w-100 p-2">
+                                        <div class="row g-0 w-100">
+                                            {% if noticia.foto %}
+                                            <div class="col-12 text-center mb-3">
+                                                <div style="background-color: #00142d; border-radius: 12px; overflow: hidden; height: 350px; display: flex; align-items: center; justify-content: center;">
+                                                    <img src="{{ url_for('static', filename='uploads/' + noticia.foto) }}" 
+                                                        class="img-fluid" 
+                                                        style="max-height: 350px; width: auto; object-fit: contain;">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 text-center">
+                                                <h5 class="fw-bold text-white mb-2" style="font-size: 1.2rem; line-height: 1.2;">{{ noticia.titulo }}</h5>
+                                                <p class="small opacity-75 mb-0" style="line-height: 1.4;">
+                                                    {{ noticia.texto }}
+                                                </p>
+                                            </div>
+                                            {% else %}
+                                            <div class="col-12 text-center px-4 py-4">
+                                                <h5 class="fw-bold text-white mb-3">{{ noticia.titulo }}</h5>
+                                                <p class="opacity-75 mb-0">{{ noticia.texto }}</p>
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            
+                            {% if noticias|length > 1 %}
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselNoticias" data-bs-slide="prev" style="width: 5%;">
+                                <span class="carousel-control-prev-icon" style="transform: scale(0.7);"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselNoticias" data-bs-slide="next" style="width: 5%;">
+                                <span class="carousel-control-next-icon" style="transform: scale(0.7);"></span>
+                            </button>
+                            {% endif %}
+                        </div>
+                        {% else %}
+                        <div class="d-flex align-items-center justify-content-center w-100 h-100" style="border: 2px dashed rgba(255,255,255,0.1); border-radius: 15px; min-height: 200px;">
+                            <h4 class="text-secondary opacity-50 text-center px-3" style="font-size: 1rem;">PRÓXIMAMENTE: NOTICIAS</h4>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5 text-start">
+            <div class="col-md-6" id="historia">
+                <div class="card-villa-pro p-4 h-100">
+                    <h3 class="text-villa-rojo mb-3">Nuestra Historia</h3>
+                    <p class="fs-5">Fundado el 8 de Marzo de 1951. Más de siete décadas siendo el corazón y orgullo de Magdalena.</p>
+                </div>
+            </div>
+            <div class="col-md-6" id="actividades">
+                <div class="card-villa-pro p-4 h-100">
+                    <h3 class="text-villa-rojo mb-3">Actividades</h3>
+                    <p class="fs-5">Múltiples actividades sociales y deportivas para todas las edades.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-5" id="sede">
+            <div class="row align-items-center text-start">
+                <div class="col-md-7 mb-4">
+                    <h3 class="fw-bold mb-4">Nuestra Sede</h3>
+                    <div class="mapa-card-pro shadow-lg">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.9044321303254!2d-57.514088!3d-35.078235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e584f67c3b9d%3A0x4c2f6d8920194458!2sLavalle%201592%2C%20Magdalena%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1710000000000!5m2!1ses!2sar" 
+                                width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <p class="mt-3 opacity-50">Lavalle 1592, Magdalena</p>
+                </div>
+                
+                <div class="col-md-5">
+                    <div class="card-villa-pro p-4 text-center">
+                        <h4 class="fw-bold mb-3">Comunidad</h4>
+                        <a href="https://whatsapp.com/channel/0029VbBjetpLo4hkJ9r4600n" target="_blank" class="btn btn-canal w-100 py-3 mb-3">
+                            <i class="fab fa-whatsapp me-2"></i> Canal de WhatsApp
+                        </a>
+                        <a href="https://wa.me/5492223435222?text=Hola!%20Quiero%20ser%20sponsor%20del%20club" target="_blank" class="btn btn-sponsor-contacto w-100 py-3">
+                            <i class="fas fa-handshake me-2"></i> Ser Sponsor,¡Sumá tu comercio al villero!
+                        </a>
+                        <p class="small mt-3 opacity-75"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-5 border-top border-secondary mt-5">
+            <h6 class="text-villa-rojo mb-4" style="letter-spacing: 3px;">NUESTROS SPONSORS</h6>
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-4">
+                <img src="https://via.placeholder.com/150x50?text=Sponsor+1" class="logo-sponsor" alt="Sponsor">
+                <img src="https://via.placeholder.com/150x50?text=Sponsor+2" class="logo-sponsor" alt="Sponsor">
+                <img src="https://via.placeholder.com/150x50?text=Sponsor+3" class="logo-sponsor" alt="Sponsor">
+                <img src="https://via.placeholder.com/150x50?text=Sponsor+4" class="logo-sponsor" alt="Sponsor">
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4"><small class="opacity-25">© 2026 C.S.D. y F. Villa Garibaldi</small></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const diasSemana = ["LUNES", "MARTES", "MIÉRCOLES", "JUEVES", "VIERNES"];
+        let diaActual = new Date().getDay(); 
+        let indiceActual = (diaActual === 0 || diaActual === 6) ? 0 : diaActual - 1;
+
+        function actualizarAgenda(indice) {
+            document.getElementById('nombre-dia').innerText = diasSemana[indice];
+            let htmlActividades = "";
+            for (let i = 1; i <= 5; i++) {
+                htmlActividades += `
+                    <div class="py-2 border-bottom border-secondary d-flex justify-content-between align-items-center opacity-75">
+                        <span>🕒 Actividad:</span>
+                        <span class="fw-bold text-villa-rojo">__ : __ hs</span>
+                    </div>`;
+            }
+            document.getElementById('lista-actividades').innerHTML = htmlActividades;
+        }
+
+        function cambiarDia(paso) {
+            indiceActual += paso;
+            if (indiceActual < 0) indiceActual = 4;
+            if (indiceActual > 4) indiceActual = 0;
+            actualizarAgenda(indiceActual);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => actualizarAgenda(indiceActual));
+    </script>
+</body>
+</html>

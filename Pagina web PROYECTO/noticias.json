@@ -1,0 +1,28 @@
+[
+    {
+        "titulo": "Noticia Completa",
+        "texto": "Esta noticia tiene de todo: una imagen arriba, un título llamativo y este texto que describe lo que pasa en el club.",
+        "foto": "foto1.jpg"
+    },
+    {
+        "titulo": "Solo Texto (Sin Foto)",
+        "texto": "Esta noticia no tiene imagen. Debería aparecer centrada verticalmente en la tarjeta, ocupando el espacio que dejó la foto.",
+        "foto": ""
+    },
+    {
+        "titulo": "Texto Muy Largo para Test",
+        "texto": "Este es un párrafo extremadamente largo que sirve para probar el recorte de texto. Debería mostrar solo las primeras tres líneas y luego poner puntos suspensivos automáticamente para no romper el diseño de la tarjeta y mantener la simetría con la agenda de la izquierda.",
+        "foto": "foto2.jpg"
+    },
+    {
+        "titulo": "Solo Título e Imagen",
+        "texto": "",
+        "foto": "foto3.jpg"
+    },
+
+    {
+        "titulo": "Prueba de historia",
+        "texto": "Esto es una foto vertical tipo instagram historias para ver como convive con el texto de abajo",
+        "foto":"test_historia.jpg"
+    }
+]

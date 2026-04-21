@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESULTADOS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 10, 30, 0.85), rgba(0, 10, 30, 0.95)), url('/static/fondo_cancha.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+        }
+
+        .contenedor-fixture {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            padding: 30px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .btn-volver {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-volver:hover { color: #ff3131; }
+        
+        .resultado-fila {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px; /* Ajuste para que no se tuerza */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .categoria-nombre {
+            flex: 1;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .resultado-goles {
+            flex: 1;
+            text-align: center;
+            color: #ff3131;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Espacio vacío a la derecha para equilibrar el flex */
+        .espacio-derecha {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    <a href="/" class="btn-volver"><i class="fas fa-arrow-left me-2"></i> Volver al Inicio</a>
+
+    <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8">
+            <div class="contenedor-fixture">
+                
+                <h2 class="mb-4" style="color: #ff3131;">RESULTADOS</h2>
+
+                <div class="dropdown mb-5">
+                    <button class="btn btn-outline-light dropdown-toggle w-100 py-3 fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 15px;">
+                        SELECCIONAR FECHA
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark w-100 text-center">
+                        <li><a class="dropdown-item" href="/resultados/1">Fecha 1</a></li>
+                        <li><a class="dropdown-item" href="/resultados/2">Fecha 2</a></li>
+                        <li><a class="dropdown-item" href="/resultados/3">Fecha 3</a></li>
+                        <li><a class="dropdown-item" href="/resultados/4">Fecha 4</a></li>
+                        <li><a class="dropdown-item" href="/resultados/5">Fecha 5</a></li>
+                        <li><a class="dropdown-item" href="/resultados/6">Fecha 6</a></li>
+                        <li><a class="dropdown-item" href="/resultados/7">Fecha 7</a></li>
+                    </ul>
+                </div>
+
+                <div id="detalle-resultados">
+                    {% if fecha == 1 %}{% set rival = "C.S. y D. VERÓNICA" %}
+                    {% elif fecha == 2 %}{% set rival = "RACING DE BAVIO" %}
+                    {% elif fecha == 3 %}{% set rival = "UNIÓN Y FUERZA" %}
+                    {% elif fecha == 4 %}{% set rival = "ATALAYA" %}
+                    {% elif fecha == 5 %}{% set rival = "JUVENTUD PIPINAS" %}
+                    {% elif fecha == 6 %}{% set rival = "SPORT CLUB" %}
+                    {% elif fecha == 7 %}{% set rival = "JUVENTUD UNIDA" %}
+                    {% else %}{% set rival = "A CONFIRMAR" %}{% endif %}
+
+                    <h4 class="mb-4 text-center">FECHA {{ fecha }} - {{ rival }}</h4>
+
+                    {% if fecha <= 7 %}
+                        <div class="resultado-fila">
+                            <span class="categoria-nombre">Primera</span>
+                            <span class="resultado-goles">0 - 0</span>
+                            <span class="espacio-derecha"></span>
+                        </div>
+                        <div class="resultado-fila">
+                            <span class="categoria-nombre">Reserva</span>
+                            <span class="resultado-goles">0 - 0</span>
+                            <span class="espacio-derecha"></span>
+                        </div>
+                        <div class="resultado-fila">
+                            <span class="categoria-nombre">Senior</span>
+                            <span class="resultado-goles">0 - 0</span>
+                            <span class="espacio-derecha"></span>
+                        </div>
+                        <div class="resultado-fila">
+                            <span class="categoria-nombre">Femenino</span>
+                            <span class="resultado-goles">0 - 0</span>
+                            <span class="espacio-derecha"></span>
+                        </div>
+                        <div class="resultado-fila">
+                            <span class="categoria-nombre">Cuarta</span>
+                            <span class="resultado-goles">0 - 0</span>
+                            <span class="espacio-derecha"></span>
+                        </div>
+                        <div class="resultado-fila">
+                            <span class="categoria-nombre">Quinta</span>
+                            <span class="resultado-goles">0 - 0</span>
+                            <span class="espacio-derecha"></span>
+                        </div>
+                        <div class="resultado-fila">
+                            <span class="categoria-nombre">Sexta</span>
+                            <span class="resultado-goles">0 - 0</span>
+                            <span class="espacio-derecha"></span>
+                        </div>
+                    {% else %}
+                        <p class="text-center mt-4 text-muted">Resultados no disponibles aún.</p>
+                    {% endif %}
+
+                    <p class="mt-4 text-muted small">Seleccioná otra fecha para ver más resultados</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixture 2026 - Villa Garibaldi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { 
+            background-image: linear-gradient(rgba(0, 10, 30, 0.85), rgba(0, 10, 30, 0.95)), url("{{ url_for('static', filename='fondo_cancha.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+        }
+        .contenedor-fixture {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            padding: 30px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .img-fixture {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid rgba(255, 49, 49, 0.5); /* Un borde rojo sutil */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .btn-volver {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-volver:hover { color: #ff3131; }
+    </style>
+</head>
+<body>
+
+    <div class="container py-5">
+        <a href="/" class="btn-volver"><i class="fas fa-arrow-left me-2"></i> Volver al Inicio</a>
+
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8">
+                <div class="contenedor-fixture">
+                    <p class="lead mb-5" style="color: #ff3131; font-weight: bold;"></p>
+                    
+                    <img src="{{ url_for('static', filename='fixture1.png') }}" alt="Fixture Parte 1" class="img-fixture">
+                    
+                    <img src="{{ url_for('static', filename='fixture2.png') }}" alt="Fixture Parte 2" class="img-fixture">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

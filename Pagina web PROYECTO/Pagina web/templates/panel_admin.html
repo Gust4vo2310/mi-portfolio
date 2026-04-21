@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control - Villa Garibaldi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #000a1a; color: white; font-family: sans-serif; }
+        .card-admin { background: rgba(0, 20, 45, 0.9); border: 1px solid #ff3131; border-radius: 15px; }
+        .btn-villa { background-color: #ff3131; color: white; font-weight: bold; }
+        .btn-villa:hover { background-color: #d32f2f; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="text-center mb-4">
+                    <h2 class="text-villa-rojo">GESTIÓN DE NOTICIAS</h2>
+                    <p class="opacity-75">C.S.D. y F. Villa Garibaldi</p>
+                </div>
+
+                <div class="card-admin p-4 shadow">
+                    <form action="/gestion-noticias-vg" method="POST" enctype="multipart/form-data">
+                        
+                        <div class="mb-3">
+                            <label class="form-label fw-bold text-white">Título (Opcional)</label>
+                            <input type="text" name="titulo" class="form-control bg-dark text-white border-secondary" placeholder="Ej: Gran Rifa del Club">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold text-white">Contenido / Texto</label>
+                            <textarea name="texto" class="form-control bg-dark text-white border-secondary" rows="4" placeholder="Escribí el cuerpo de la noticia aquí..."></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold text-white">Subir Foto (Opcional)</label>
+                            <input type="file" name="foto" class="form-control bg-dark text-white border-secondary">
+                            <small class="text-secondary">Recomendado: Imágenes horizontales o cuadradas.</small>
+                        </div>
+
+                        <hr class="border-secondary my-4">
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold text-danger">Clave Maestra</label>
+                            <input type="password" name="clave" class="form-control bg-dark text-white border-danger" required placeholder="Ingresá la clave de acceso">
+                        </div>
+
+                        <button type="submit" class="btn btn-villa w-100 py-3 mb-2">
+                            <i class="fas fa-paper-plane me-2"></i>PUBLICAR NOTICIA
+                        </button>
+                        
+                        <a href="/" class="btn btn-outline-light w-100">Volver a la Web</a>
+                    </form>
+                </div>
+
+                <p class="text-center mt-4 small opacity-50">Panel exclusivo para miembros de la comisión.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
