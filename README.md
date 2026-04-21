@@ -7,18 +7,29 @@ Mi objetivo es transformar problemas complejos en herramientas digitales robusta
 
 ---
 🛠️ Tecnologías destacadas:
-🐍 Python | 📊 Pandas | 🗄️ SQL | 🎙️ Speech Recognition | 📄 Procesamiento de PDF | 📁 Gestión de CSV/JSON
+🐍 Python | 📊 Pandas | 🌐 Flask | 🎨 Bootstrap 5 | 🗄️ SQL | 🎙️ Speech Recognition | 📄 Procesamiento de PDF | 📁 Gestión de CSV/JSON
 ---
 
 ## 🛠️ Tecnologías y Herramientas
-* **Lenguajes:** Python (Lógica, Scripts, Manejo de Excepciones)
-* **Librerías:** Pandas (Análisis de Datos), SpeechRecognition (Voz a Texto), PyPDF2 (Manejo de PDF), pyttsx3 (Texto a Voz Offline), Keyboard (Control en tiempo real), Pydub (Audio), Matplotlib, OS.
+* **Lenguajes:** Python (Lógica, Scripts, Manejo de Excepciones), HTML5, CSS3.
+* **Librerías:** Flask (Backend Web), Bootstrap 5 (Layout & UI), Pandas (Análisis de Datos), SpeechRecognition (Voz a Texto), PyPDF2 (Manejo de PDF), pyttsx3 (Texto a Voz Offline), Keyboard (Control en tiempo real), Pydub (Audio), Matplotlib, OS.
 * **Herramientas Externas:** FFmpeg (Procesamiento Multimedia), APIs Rest (CriptoYa, Google Cloud).
-* **Sistemas:** Análisis de procesos, arquitectura CRUD y persistencia de datos.
+* **Sistemas:** Desarrollo Web Full-Stack, Análisis de procesos, arquitectura CRUD y persistencia de datos.
 
 ---
 
 ## 📂 Proyectos Destacados
+
+### 🏟️ [Portal Web Club de Futbol]
+Desarrollo de un sistema web dinámico integral para la gestión institucional de un club de futbol. Esta herramienta permite centralizar la comunicación y automatizar la carga de contenidos.
+
+### 📋 ¿Qué hace?
+* **Panel de Administración:** Implementa un backend privado para que la dirigencia pueda gestionar noticias y contenidos sin intervención técnica.
+* **Gestión de Medios:** Motor de carga de imágenes con soporte para múltiples formatos y lógica de organización automática.
+* **Persistencia JSON:** Manejo de base de datos ligera para el almacenamiento eficiente de la agenda y las noticias del club.
+* **Diseño Mobile-First:** Interfaz responsiva desarrollada con Bootstrap 5, optimizada para el acceso de los socios desde celulares.
+
+---
 
 ### 🎧 [Escucha tu PDF]
 Herramienta avanzada para la conversión de documentos PDF a voz en tiempo real. A diferencia de los lectores estáticos, este sistema permite una interacción dinámica total con el usuario durante la lectura.
