@@ -11,7 +11,7 @@ UPLOAD_FOLDER = 'static/uploads'
 NOTICIAS_FILE = 'noticias.json'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-# Nos aseguramos de que la carpeta de fotos exista
+# aseguramos de que la carpeta de fotos exista
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
@@ -22,11 +22,11 @@ def obtener_noticias():
             return json.load(f)
     return []
 
-# --- TUS RUTAS ORIGINALES (INTACTAS) ---
+# --- RUTAS ORIGINALES ---
 
 @app.route('/')
 def inicio():
-    # Ahora le pasamos las noticias al index para que el carrusel las muestre
+    # pasamos las noticias al index para que el carrusel las muestre
     lista_noticias = obtener_noticias()
     return render_template('index.html', noticias=lista_noticias)
 
@@ -115,11 +115,11 @@ def camp_bochas():
 def galeria():
     return render_template('galeria.html')
 
-# --- NUEVAS RUTAS PARA EL PANEL SECRETO (SIN ROMPER LO ANTERIOR) ---
+# --- NUEVAS RUTAS PARA EL PANEL SECRETO  ---
 
 @app.route('/gestion-noticias-vg', methods=['GET', 'POST'])
 def panel_noticias():
-    # CLAVE DE ACCESO (Podés cambiarla por la que quieras)
+    # CLAVE DE ACCESO 
     CLAVE_MAESTRA = "villa2026"
     
     if request.method == 'POST':
